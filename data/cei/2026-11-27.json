@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-27",
+  "source": "https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=20261127",
+  "references": {
+    "prima": [
+      "Ap 20,1-4.11-21,2"
+    ],
+    "salmo": [
+      "Sal 83"
+    ],
+    "acclamazione": [
+      "Lc 21,28"
+    ],
+    "vangelo": [
+      "Lc 21,29-33"
+    ]
+  },
+  "sections": [
+    "acclamazione",
+    "antcom",
+    "colletta",
+    "dopo",
+    "ingresso",
+    "offerte",
+    "prima",
+    "salmo",
+    "vangelo"
+  ]
+}

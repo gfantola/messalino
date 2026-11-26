@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-25",
+  "source": "https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=20261125",
+  "references": {
+    "prima": [
+      "Ap 15,1-4"
+    ],
+    "salmo": [
+      "Sal 97"
+    ],
+    "acclamazione": [
+      "Ap 2,10c"
+    ],
+    "vangelo": [
+      "Lc 21,12-19"
+    ]
+  },
+  "sections": [
+    "acclamazione",
+    "antcom",
+    "colletta",
+    "dopo",
+    "ingresso",
+    "offerte",
+    "prima",
+    "salmo",
+    "vangelo"
+  ]
+}

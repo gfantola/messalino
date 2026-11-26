@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-29",
+  "source": "https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=20261129",
+  "references": {
+    "prima": [
+      "Is 63,16b-17.19b; 64,2-7"
+    ],
+    "salmo": [
+      "Sal 79"
+    ],
+    "seconda": [
+      "1Cor 1,3-9"
+    ],
+    "acclamazione": [
+      "Sal 84,8"
+    ],
+    "vangelo": [
+      "Mc 13,33-37"
+    ]
+  },
+  "sections": [
+    "acclamazione",
+    "antcom",
+    "colletta",
+    "dopo",
+    "ingresso",
+    "offerte",
+    "prima",
+    "salmo",
+    "seconda",
+    "vangelo"
+  ]
+}

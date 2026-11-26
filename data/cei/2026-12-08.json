@@ -1,0 +1,33 @@
+{
+  "date": "2026-12-08",
+  "source": "https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=20261208",
+  "references": {
+    "prima": [
+      "Gen 3,9-15.20"
+    ],
+    "salmo": [
+      "Sal 97"
+    ],
+    "seconda": [
+      "Ef 1,3-6.11-12"
+    ],
+    "acclamazione": [
+      "Lc 1,28.42"
+    ],
+    "vangelo": [
+      "Lc 1,26-38"
+    ]
+  },
+  "sections": [
+    "acclamazione",
+    "antcom",
+    "colletta",
+    "dopo",
+    "ingresso",
+    "offerte",
+    "prima",
+    "salmo",
+    "seconda",
+    "vangelo"
+  ]
+}

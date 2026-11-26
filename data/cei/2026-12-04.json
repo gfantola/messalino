@@ -1,0 +1,29 @@
+{
+  "date": "2026-12-04",
+  "source": "https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=20261204",
+  "references": {
+    "prima": [
+      "Is 25,6-10a"
+    ],
+    "salmo": [
+      "Sal 22"
+    ],
+    "acclamazione": [
+      "Is 55,6"
+    ],
+    "vangelo": [
+      "Mt 15,29-37"
+    ]
+  },
+  "sections": [
+    "acclamazione",
+    "antcom",
+    "colletta",
+    "dopo",
+    "ingresso",
+    "offerte",
+    "prima",
+    "salmo",
+    "vangelo"
+  ]
+}

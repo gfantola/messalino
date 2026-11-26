@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-30",
+  "source": "https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=20261130",
+  "references": {
+    "prima": [
+      "Rm 10,9-18"
+    ],
+    "salmo": [
+      "Sal 18"
+    ],
+    "acclamazione": [
+      "Mt 4,19"
+    ],
+    "vangelo": [
+      "Mt 4,18-22"
+    ]
+  },
+  "sections": [
+    "acclamazione",
+    "antcom",
+    "colletta",
+    "dopo",
+    "ingresso",
+    "offerte",
+    "prima",
+    "salmo",
+    "vangelo"
+  ]
+}

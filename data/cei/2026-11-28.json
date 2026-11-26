@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-28",
+  "source": "https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=20261128",
+  "references": {
+    "prima": [
+      "Ap 22,1-7"
+    ],
+    "salmo": [
+      "Sal 94"
+    ],
+    "acclamazione": [
+      "Lc 21,36"
+    ],
+    "vangelo": [
+      "Lc 21,34-36"
+    ]
+  },
+  "sections": [
+    "acclamazione",
+    "antcom",
+    "colletta",
+    "dopo",
+    "ingresso",
+    "offerte",
+    "prima",
+    "salmo",
+    "vangelo"
+  ]
+}

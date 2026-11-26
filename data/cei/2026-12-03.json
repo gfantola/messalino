@@ -1,0 +1,29 @@
+{
+  "date": "2026-12-03",
+  "source": "https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=20261203",
+  "references": {
+    "prima": [
+      "Is 26,1-6"
+    ],
+    "salmo": [
+      "Sal 117"
+    ],
+    "acclamazione": [
+      "Is 55,6"
+    ],
+    "vangelo": [
+      "Mt 7,21.24-27"
+    ]
+  },
+  "sections": [
+    "acclamazione",
+    "antcom",
+    "colletta",
+    "dopo",
+    "ingresso",
+    "offerte",
+    "prima",
+    "salmo",
+    "vangelo"
+  ]
+}

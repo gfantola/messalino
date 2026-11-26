@@ -1,0 +1,26 @@
+{
+  "date": "2026-12-09",
+  "source": "https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=20261209",
+  "references": {
+    "prima": [
+      "Is 40,25-31"
+    ],
+    "salmo": [
+      "Sal 102"
+    ],
+    "vangelo": [
+      "Mt 11,28-30"
+    ]
+  },
+  "sections": [
+    "acclamazione",
+    "antcom",
+    "colletta",
+    "dopo",
+    "ingresso",
+    "offerte",
+    "prima",
+    "salmo",
+    "vangelo"
+  ]
+}
