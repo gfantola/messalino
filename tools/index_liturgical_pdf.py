@@ -12,6 +12,7 @@ import unicodedata
 from pathlib import Path
 
 def normalize(value):
+    value=value.translate(str.maketrans({'π':'t','∏':'T','±':'N','ı':'1','Ω':'ff','≈':'fi'}))
     value=unicodedata.normalize('NFKD',value.casefold())
     return ' '.join(re.findall(r'[a-z0-9]+',''.join(c for c in value if not unicodedata.combining(c))))
 
