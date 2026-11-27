@@ -61,6 +61,8 @@ def calendar_day(day):
             week=(day-baptism).days//7+1
         else:
             week=34-((a-timedelta(days=7)-day).days+6)//7
+    if season=='Tempo Ordinario' and day>pent:
+        week=34-((a-timedelta(days=7))-(day-timedelta(days=(day.weekday()+1)%7))).days//7
     names=['Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato','Domenica']
     title=names[day.weekday()]+' - '+season+(f' - settimana {week}' if week is not None else '')
     if day in movable: title,color=movable[day]
