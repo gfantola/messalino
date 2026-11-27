@@ -7,13 +7,20 @@ class IndexTests(unittest.TestCase):
         entries=data['entries']
         self.assertEqual(len(entries),84)
         self.assertEqual(len({e['id'] for e in entries}),84)
+        self.assertEqual(len({e['lectionary_printed_page'] for e in entries}),84)
         for e in entries:
+            self.assertLessEqual(e['lectionary_printed_page'],e['lectionary_pdf_page'])
+            self.assertTrue(e['label'])
             self.assertTrue(1<=e['lectionary_pdf_page']<=558)
             self.assertTrue(1<=e['missal_pdf_page']<=1278)
     def test_dates(self):
         for day,page in [('2026-11-29',13),('2026-12-25',57),('2027-03-28',215),('2027-05-16',283)]:
             self.assertEqual(lookup_date(day)['entry']['lectionary_pdf_page'],page)
         self.assertIsNone(lookup_date('2026-11-22'))
+    def test_metadata(self):
+        item=lookup_date('2026-11-29')['entry']
+        self.assertEqual(item['lectionary_printed_page'],11)
+        self.assertEqual(item['missal_pdf_page'],88)
     def test_variants(self):
         self.assertEqual(lookup_id('christmas-night')['entry']['missal_pdf_page'],121)
         self.assertIsNone(lookup_id('missing'))
