@@ -43,6 +43,28 @@ def calendar_day(day):
              pent+timedelta(days=14):('Santissimo Corpo e Sangue di Cristo','bianco'),
              pent+timedelta(days=19):('Sacratissimo Cuore di Gesù','bianco'),
              a-timedelta(days=7):('Cristo Re dell’Universo','bianco')}
+    # Major fixed celebrations; remaining sanctoral and local entries are not yet covered.
+    solemnities={(3,19):('San Giuseppe','bianco'),(3,25):('Annunciazione del Signore','bianco'),
+        (6,24):('Natività di San Giovanni Battista','bianco'),(6,29):('Santi Pietro e Paolo','rosso'),
+        (8,15):('Assunzione della Beata Vergine Maria','bianco'),(11,1):('Tutti i Santi','bianco'),
+        (12,8):('Immacolata Concezione','bianco')}
+    lord_feasts={(2,2):('Presentazione del Signore','bianco'),(8,6):('Trasfigurazione del Signore','bianco'),
+        (9,14):('Esaltazione della Santa Croce','rosso'),(11,9):('Dedicazione della Basilica Lateranense','bianco')}
+    blocked=set(fixed)|set(movable)
+    def privileged(d):
+        return (p-timedelta(days=7)<=d<=p+timedelta(days=7)
+            or d==ash or d in blocked
+            or (d.weekday()==6 and (a<=d<date(y,12,25) or ash<=d<=pent)))
+    assigned={}
+    for (month,number),entry in solemnities.items():
+        original=date(y,month,number); target=original
+        if (month,number)==(3,19) and p-timedelta(days=7)<=target<p:
+            target=p-timedelta(days=8)
+        elif (month,number)==(3,25) and p-timedelta(days=7)<=target<=p+timedelta(days=7):
+            target=p+timedelta(days=8)
+        while privileged(target) or target in assigned:
+            target+=timedelta(days=1)
+        assigned[target]=(entry,original)
     week=None
     if day>=date(y,12,25) or day<=baptism:
         season='Natale'; color='bianco'
@@ -67,10 +89,18 @@ def calendar_day(day):
     title=names[day.weekday()]+' - '+season+(f' - settimana {week}' if week is not None else '')
     if day in movable: title,color=movable[day]
     if day in fixed: title,color=fixed[day]
+    rank=None; transferred_from=None
+    if day in assigned:
+        (title,color),original=assigned[day]; rank='solennità'
+        if original!=day: transferred_from=original.isoformat()
+    elif (day.month,day.day) in lord_feasts and not privileged(day) and not (ash<=day<p and day.weekday()==6):
+        title,color=lord_feasts[(day.month,day.day)]; rank='festa'
+    elif day==date(y,11,2) and day not in fixed and day not in movable:
+        title,color='Commemorazione di tutti i fedeli defunti','viola'; rank='commemorazione'
     return {'date':day.isoformat(),'liturgical_year':ly,'sunday_cycle':cycle,
             'weekday_cycle':'II' if ly%2==0 else 'I','season':season,'week':week,
-            'title':title,'color':color,'complete':False,
-            'scope':'Temporale romano, Italia; senza calendario dei santi e precedenze complete'}
+            'title':title,'color':color,'rank':rank,'transferred_from':transferred_from,'complete':False,
+            'scope':'Temporale romano e principali celebrazioni fisse; precedenze e santorale parziali'}
 
 if __name__=='__main__':
     import argparse,json
