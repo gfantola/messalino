@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "scope": "Four Advent Sundays, ordinary daytime formularies; no alternative collects or local calendar.",
+  "page_numbering": "1-based physical PDF pages",
+  "documents": {
+    "lectionary": {
+      "sha256": "f3b5b274915b4438bd9fdff4be56b747fc63c5a502d7120220dba4cbc47d8664",
+      "pages": 558
+    },
+    "missal": {
+      "sha256": "b40f40a70f035d8caf7b8a3a73e98dbc0144f2ad9b8edc4dc2a53bf5ac902f80",
+      "pages": 1278
+    }
+  },
+  "entries": [
+    {
+      "week": 1,
+      "lectionary": {
+        "start": 13,
+        "end": 19,
+        "sections": {
+          "prima": 13,
+          "salmo": 17,
+          "seconda": 18,
+          "acclamazione": 19,
+          "vangelo": 19
+        }
+      },
+      "missal": {
+        "page": 88,
+        "printed": "5"
+      }
+    },
+    {
+      "week": 2,
+      "lectionary": {
+        "start": 20,
+        "end": 25,
+        "sections": {
+          "prima": 20,
+          "salmo": 22,
+          "seconda": 23,
+          "acclamazione": 24,
+          "vangelo": 24
+        }
+      },
+      "missal": {
+        "page": 95,
+        "printed": "12"
+      }
+    },
+    {
+      "week": 3,
+      "lectionary": {
+        "start": 26,
+        "end": 30,
+        "sections": {
+          "prima": 26,
+          "salmo": 27,
+          "seconda": 28,
+          "acclamazione": 28,
+          "vangelo": 29
+        }
+      },
+      "missal": {
+        "page": 102,
+        "printed": "19"
+      }
+    },
+    {
+      "week": 4,
+      "lectionary": {
+        "start": 31,
+        "end": 36,
+        "sections": {
+          "prima": 31,
+          "salmo": 32,
+          "seconda": 35,
+          "acclamazione": 35,
+          "vangelo": 36
+        }
+      },
+      "missal": {
+        "page": 108,
+        "printed": "25"
+      }
+    }
+  ]
+}
