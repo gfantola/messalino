@@ -6,6 +6,7 @@ import datetime, json, pathlib, re, urllib.request, urllib.parse
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from zoneinfo import ZoneInfo
 from probe_cei_structure import Parser, clean, key
+from liturgical_sources import sources_for
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 CACHE={}
 def acquire(date):
@@ -34,11 +35,12 @@ class Handler(SimpleHTTPRequestHandler):
     def __init__(self,*args,**kwargs):super().__init__(*args,directory=str(ROOT),**kwargs)
     def do_GET(self):
         u=urllib.parse.urlsplit(self.path)
-        if u.path!='/api/day':return super().do_GET()
+        if u.path not in ('/api/day','/api/sources'):return super().do_GET()
         try:
             date=urllib.parse.parse_qs(u.query)['date'][0]
             if datetime.date.fromisoformat(date).isoformat()!=date:raise ValueError()
-            result=acquire(date);status=200
+            result=sources_for(date) if u.path=='/api/sources' else acquire(date)
+            status=200
         except Exception as e:
             result={'error':str(e)};status=502
         payload=json.dumps(result,ensure_ascii=False).encode()
