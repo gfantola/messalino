@@ -1,0 +1,17 @@
+name: Test liturgical calendar
+on:
+  push:
+    branches: [liturgical-calendar]
+  pull_request:
+    paths:
+      - 'tools/*calendar*.py'
+      - '.github/workflows/test-calendar.yml'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tools -p 'test_liturgical_calendar.py' -v
