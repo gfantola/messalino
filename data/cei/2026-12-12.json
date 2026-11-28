@@ -1,0 +1,29 @@
+{
+  "date": "2026-12-12",
+  "source": "https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=20261212",
+  "references": {
+    "prima": [
+      "Sir 48,1-4.9-11"
+    ],
+    "salmo": [
+      "Sal 79"
+    ],
+    "acclamazione": [
+      "Lc 3,4.6"
+    ],
+    "vangelo": [
+      "Mt 17,10-13"
+    ]
+  },
+  "sections": [
+    "acclamazione",
+    "antcom",
+    "colletta",
+    "dopo",
+    "ingresso",
+    "offerte",
+    "prima",
+    "salmo",
+    "vangelo"
+  ]
+}
